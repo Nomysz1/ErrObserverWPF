@@ -12,7 +12,10 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Margin="5">
+            <Label Content="Ścieżka źródłowa" />
             <TextBox x:Name="filepath" MaxLength="15" Margin="5" />
+            <Label Content="Rozszerzenie" />
+            <TextBox x:Name="extenstion" MaxLength="15" Margin="5" />
             <Button x:Name="ConfirmBtn" Margin="5" FontSize="16" FontWeight="Bold" Content="Zatwierdź"/>
         </StackPanel>
     </Grid>
