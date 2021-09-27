@@ -5,45 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ErrObserver"
         mc:Ignorable="d"
-        Title="ErrObserver" Height="auto" Width="800">
-    
-    <Window.Resources>
-        <SolidColorBrush x:Key="ButtonColor" Color="DarkGray" />
-    </Window.Resources>
+        Title="ErrObserver" Height="451" Width="800" ResizeMode="NoResize">
 
-    <Grid Background="WhiteSmoke">
+    <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" >
-            <Border ></Border>
-            <Label Content="Ścieżka źródłowa" />
-            <TextBox x:Name="filepath" MaxLength="15" FontSize="16" Margin="5" />
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="1 1 1 0" >
             <Label Content="Rozszerzenie" />
-            <TextBox x:Name="extenstion" MaxLength="15" FontSize="16" Margin="5" />
+            <TextBox x:Name="extenstion" />
             <Label Content="Źródłowy adres email" />
-            <TextBox x:Name="emailAddr" MaxLength="15" FontSize="16" Margin="5" />
+            <TextBox x:Name="emailAddr" MaxLength="25" KeyUp="emailAddr_KeyUp" />
             <Label Content="Port SMTP" />
-            <TextBox x:Name="smtpNumber" MaxLength="15" FontSize="16" Margin="5" />
+            <TextBox x:Name="smtpNumber" />
             <Label Content="Host SMTP" />
-            <TextBox x:Name="smtpHost" MaxLength="15" FontSize="16" Margin="5" />
+            <TextBox x:Name="smtpHost" />
             <Label Content="SSL" />
-            <TextBox x:Name="SSL" MaxLength="15" FontSize="16" Margin="5" />
+            <ComboBox Name="sslOptions" Margin="5"/>
             <Label Content="Adres email do wysyłki" />
-            <TextBox x:Name="To" MaxLength="15" FontSize="16" Margin="5" />
+            <TextBox x:Name="To" MaxLength="25"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="0">
-            <Label Content="Podaj foldery do obserwacji" FontSize="16"/>
-            <TextBox x:Name="foldersInp" MaxLength="15" FontSize="16" Margin="5" />
-            <ListView></ListView>
-        </StackPanel>
-        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
-            <Button x:Name="ConfirmBtn" Margin="5 10 5 5" FontSize="16" FontWeight="Bold" Background="{StaticResource ButtonColor}" Content="Zatwierdź"/>
+            <Label Content="Ścieżka źródłowa" />
+            <TextBox x:Name="filepath" />
+            <Button x:Name="addBtn" Content="Dodaj ścieżkę" FontSize="16" Margin="5" FontWeight="Bold" Background="{StaticResource ButtonColor}" Click="btnController" />
+            <ListBox x:Name="filepathList" Height="242" Margin="5" />
+            <Button x:Name="confirmBtn" Content="Zatwierdź"/>
         </StackPanel>
     </Grid>
 </Window>

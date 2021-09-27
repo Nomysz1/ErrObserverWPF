@@ -18,3 +18,4 @@ C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\D
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.dll
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.pdb
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.genruntimeconfig.cache
+C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\App.baml

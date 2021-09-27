@@ -4,6 +4,26 @@
              xmlns:local="clr-namespace:ErrObserver"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="ButtonColor" Color="DarkGray" />
+
+        <Style x:Key="mainGrid" TargetType="Grid">
+            <Setter Property="Background" Value="WhiteSmoke"/>
+        </Style>
+        
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="MaxLength" Value="15" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+
+         <Style TargetType="Button">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
     </Application.Resources>
 </Application>
