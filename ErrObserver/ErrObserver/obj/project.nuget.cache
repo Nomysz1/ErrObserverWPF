@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "NhMOdj8BeSIqEKO7tDBPrJ+YPcaWDfXP+QV69OkEH39Bt6tvGKoqrDX9NNEH6DQOl7dsCvfodrtWPS4Gl/vmZw==",
+  "dgSpecHash": "unLXOs5XwpXCaByRXs1h0cypX2WOUf77nUaS9o9ZmIsdXnQH2st44VaOEBnTKjbdxMjeUhIYWqy2WPCUvtkAIg==",
   "success": true,
   "projectFilePath": "C:\\Users\\simon\\source\\repos\\Nomysz1\\ErrObserverWPF\\ErrObserver\\ErrObserver\\ErrObserver.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\simon\\.nuget\\packages\\cannoli.services\\1.0.0.1\\cannoli.services.1.0.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „Cannoli.Services 1.0.0.1” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8” zamiast platformy docelowej projektu „.NETCoreApp,Version=v3.1”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "Cannoli.Services",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

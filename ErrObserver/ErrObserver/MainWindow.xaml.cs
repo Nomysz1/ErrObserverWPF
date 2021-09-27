@@ -1,6 +1,8 @@
 ﻿using ErrObserver.Rgx;
+using ErrObserver.TextBoxMethods;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -23,17 +25,35 @@ namespace ErrObserver
             this.sslOptions.SelectedIndex = 1;
         }
 
-        private void emailAddr_KeyUp(object sender, KeyEventArgs e)
+        private void validTextBoxesInput(object sender, KeyEventArgs e)
         {
+            var TextBox = sender as TextBox;
             var result = default(bool);
-            var textBox = sender as TextBox;
-            var text = textBox.Text;
-
-            result = ValidationCl.checkEmailAddr(ref text);
-            if (result == false)
-                textBox.Foreground = Brushes.Red;
-            else
-                textBox.Foreground = Brushes.Blue;
+            var text = TextBox.Text;
+            var name = TextBox.Name;
+            switch (name)
+            {
+                case "emailAddr":
+                    result = ValidationCl.checkEmailAddr(ref text);
+                    TextBoxes.setUpCorrectColor(ref result, TextBox);
+                    break;
+                case "To":
+                    result = ValidationCl.checkEmailAddr(ref text);
+                    TextBoxes.setUpCorrectColor(ref result, TextBox);
+                    break;
+                case "smtpNumber":
+                    result = ValidationCl.checkSMTPPort(ref text);
+                    TextBoxes.setUpCorrectColor(ref result, TextBox);
+                    break;
+                case "extenstion":
+                    result = ValidationCl.checkExtension(ref text);
+                    TextBoxes.setUpCorrectColor(ref result, TextBox);
+                    break;
+                case "smtpHost":
+                    result = ValidationCl.checkSMTPHost(ref text);
+                    TextBoxes.setUpCorrectColor(ref result, TextBox);
+                    break;
+            }
         }
 
         private void textBoxClickController(object sender, EventArgs e)
@@ -43,6 +63,7 @@ namespace ErrObserver
             switch (name)
             {
                 case "filepath":
+                    
                     break;
             }
         }
@@ -55,7 +76,11 @@ namespace ErrObserver
             {
                 case "addBtn":
                     var path = this.filepath.Text;
-                    this.filepathList.Items.Add(path);
+                    var length = path.Length;
+                    if (length > 0 && Directory.Exists(path))
+                        this.filepathList.Items.Add(path);
+                    else
+                        MessageBox.Show("Brak poprawnej ścieżki lub katalog nie istnieje", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
             }    
         }
