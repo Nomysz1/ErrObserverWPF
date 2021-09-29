@@ -1,5 +1,6 @@
 ﻿using ErrObserver.Rgx;
 using ErrObserver.TextBoxMethods;
+using ErrObserver.Validation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,10 +18,14 @@ namespace ErrObserver
     {
         List<string> sslOptionsList = new List<string> { "TAK", "NIE" };
 
+        inputStatus inputStatus;
+
         public MainWindow()
         {
             InitializeComponent();
 
+            inputStatus = new inputStatus(); //assign all attributes to false
+            
             this.sslOptions.ItemsSource = sslOptionsList;
             this.sslOptions.SelectedIndex = 1;
         }
@@ -35,27 +40,32 @@ namespace ErrObserver
             {
                 case "emailAddr":
                     result = ValidationCl.checkEmailAddr(ref text);
+                    inputStatus.EmailAddr = result;
                     TextBoxes.setUpCorrectColor(ref result, TextBox);
                     break;
                 case "To":
                     result = ValidationCl.checkEmailAddr(ref text);
+                    inputStatus.To = result;
                     TextBoxes.setUpCorrectColor(ref result, TextBox);
                     break;
                 case "smtpNumber":
                     result = ValidationCl.checkSMTPPort(ref text);
+                    inputStatus.SmtpNumber = result;
                     TextBoxes.setUpCorrectColor(ref result, TextBox);
                     break;
                 case "extenstion":
                     result = ValidationCl.checkExtension(ref text);
+                    inputStatus.Extension = result;
                     TextBoxes.setUpCorrectColor(ref result, TextBox);
                     break;
                 case "smtpHost":
                     result = ValidationCl.checkSMTPHost(ref text);
+                    inputStatus.SmtpHost = result;
                     TextBoxes.setUpCorrectColor(ref result, TextBox);
                     break;
             }
         }
-
+        
         private void textBoxClickController(object sender, EventArgs e)
         {
             var TextBox = sender as TextBox;
@@ -74,17 +84,23 @@ namespace ErrObserver
         {
             var button = sender as Button;
             var name = button.Name;
-            switch(name)
+            switch (name)
             {
                 case "addBtn":
-                    var path = this.filepath.Text;
+                    var path = this.dirPath.Text;
                     var length = path.Length;
                     if (length > 0 && Directory.Exists(path))
                         this.filepathList.Items.Add(path);
                     else
                         MessageBox.Show("Brak poprawnej ścieżki lub katalog nie istnieje", "Informacja", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
-            }    
+                case "emailTestBtn":
+                    if (inputStatus.isAllValuesinitialised() == true)
+                        MessageBox.Show("OK");
+                    else
+                        MessageBox.Show("Nie wszystko zostało wypełnione poprawnie", "INFORMACJA", MessageBoxButton.OK, MessageBoxImage.Hand);
+                    break;
+            }
         }
     }
 }
