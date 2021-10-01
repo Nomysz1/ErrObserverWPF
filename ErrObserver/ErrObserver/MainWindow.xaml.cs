@@ -48,7 +48,7 @@ namespace ErrObserver
                     inputStatus.To = result;
                     TextBoxes.setUpCorrectColor(ref result, TextBox);
                     break;
-                case "smtpNumber":
+                case "smtpPort":
                     result = ValidationCl.checkSMTPPort(ref text);
                     inputStatus.SmtpNumber = result;
                     TextBoxes.setUpCorrectColor(ref result, TextBox);
@@ -96,8 +96,30 @@ namespace ErrObserver
                     break;
                 case "emailTestBtn":
                     if (inputStatus.isAllValuesinitialised() == true)
-                        MessageBox.Show("OK");
-                    else
+                    {
+                        var emailAddr = this.emailAddr.Text;
+                        var unencryptedPass = this.pass.Password;
+                        var securePass = SecureStr.encrypt(ref unencryptedPass);
+                        unencryptedPass = this.pass.Password = "";
+                        Email testEmail = new Email(ref emailAddr, ref securePass);
+                        var smtpHost = this.smtpHost.Text;
+                        var smtpPort = default(int);
+                        int.TryParse(this.smtpPort.Text, out smtpPort);
+                        var To = this.To.Text;
+                        var ssl = sslOptions.SelectedItem == "NIE"? false: true;
+                        testEmail.addSMTPPort(ref smtpPort);
+                        testEmail.addSMTPHost(ref smtpHost);
+                        testEmail.addSSL(ref ssl);
+                        testEmail.addTo(ref To);
+                        try
+                        {
+                            testEmail.sendTest();
+                        } catch (Exception err)
+                        {
+                            MessageBox.Show(err.Message, "INFORMACJA", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                        
+                    } else
                         MessageBox.Show("Nie wszystko zostało wypełnione poprawnie", "INFORMACJA", MessageBoxButton.OK, MessageBoxImage.Hand);
                     break;
             }

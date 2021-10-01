@@ -21,9 +21,9 @@
             <Label Content="Źródłowy adres email" />
             <TextBox x:Name="emailAddr" MaxLength="25" KeyUp="validTextBoxesInput" />
             <Label Content="Hasło do email" />
-            <PasswordBox />
+            <PasswordBox x:Name="pass"/>
             <Label Content="Port SMTP" />
-            <TextBox x:Name="smtpNumber" KeyUp="validTextBoxesInput"/>
+            <TextBox x:Name="smtpPort" KeyUp="validTextBoxesInput"/>
             <Label Content="Host SMTP" />
             <TextBox x:Name="smtpHost" KeyUp="validTextBoxesInput" />
             <Label Content="SSL" />

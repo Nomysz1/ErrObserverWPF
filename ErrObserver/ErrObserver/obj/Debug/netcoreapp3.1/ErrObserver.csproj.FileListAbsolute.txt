@@ -1,7 +1,3 @@
-C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\App.g.cs
-C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver_MarkupCompile.cache
-C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver_MarkupCompile.lref
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\ErrObserver.exe
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\ErrObserver.deps.json
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\ErrObserver.runtimeconfig.json
@@ -9,6 +5,10 @@ C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\D
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\ErrObserver.dll
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\ErrObserver.pdb
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\Cannoli.Services.dll
+C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver_MarkupCompile.cache
+C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver_MarkupCompile.lref
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\MainWindow.baml
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.g.resources
@@ -20,4 +20,3 @@ C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\D
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.dll
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.pdb
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.genruntimeconfig.cache
-C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.csproj.AssemblyReference.cache

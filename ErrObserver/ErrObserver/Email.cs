@@ -72,7 +72,24 @@ namespace ErrObserver
 
         public void sendTest()
         {
-            throw new NotImplementedException();
+            var email = new SmtpClient()
+            {
+                Port = this.SMTPPort,
+                Host = this.Host,
+                Credentials = credential,
+                EnableSsl = this.EnableSsl
+            };
+            var message = new MailMessage()
+            {
+                From = new MailAddress(credential.UserName),
+                Subject = this.Subject,
+                Body = String.Format("<h1 style='color: red;'>Wiadomość testowa</h1>"),
+                IsBodyHtml = true
+            };
+
+            message.To.Add(this.To);
+
+            email.Send(message);
         }
     }
 }
