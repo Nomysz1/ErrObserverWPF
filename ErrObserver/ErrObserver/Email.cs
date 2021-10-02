@@ -91,5 +91,10 @@ namespace ErrObserver
 
             email.Send(message);
         }
+
+        public override string ToString()
+        {
+            return String.Format("<SMTP PORT - {0}> \n <SMTP Host {1}> \n <SSL {2}>", this.SMTPPort, this.Host, this.EnableSsl);
+        }
     }
 }

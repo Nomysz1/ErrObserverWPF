@@ -46,6 +46,7 @@ namespace ErrObserver
         private void FileWatcher_Created(object sender, FileSystemEventArgs e)
         {
             string FullPath = e.FullPath;
+            MessageBox.Show(FullPath);
             email.send(this.dirPath, FullPath);
         }
     }

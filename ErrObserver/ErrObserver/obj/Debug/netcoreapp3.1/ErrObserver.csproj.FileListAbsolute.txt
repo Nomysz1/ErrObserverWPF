@@ -5,6 +5,7 @@ C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\D
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\ErrObserver.dll
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\ErrObserver.pdb
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\bin\Debug\netcoreapp3.1\Cannoli.Services.dll
+C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver.csproj.AssemblyReference.cache
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\simon\source\repos\Nomysz1\ErrObserverWPF\ErrObserver\ErrObserver\obj\Debug\netcoreapp3.1\ErrObserver_MarkupCompile.cache
