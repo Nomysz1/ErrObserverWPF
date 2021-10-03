@@ -43,7 +43,7 @@ namespace ErrObserver.Rgx
             var result = true;
             foreach(var element in extension)
             {
-                if (char.IsLetter(element) == false && element != '*')
+                else if (char.IsLetter(element) == false)
                     result = false;
             }
             return result;
