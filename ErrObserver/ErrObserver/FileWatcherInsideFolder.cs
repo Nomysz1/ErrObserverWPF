@@ -47,6 +47,7 @@ namespace ErrObserver
         private void FileWatcher_Changed(object sender, FileSystemEventArgs e)
         {
             string FullPath = e.FullPath;
+            
             string body = String.Format("" +
                 "<h1>Witaj</h1><p>Zmieniono element w katologu <span style='color: red;'>{0}</span></p>" +
                 "<p style='font-weigth: 600;'>Więcej szczegółów w załączniku</p>", dirPath);
@@ -56,6 +57,7 @@ namespace ErrObserver
         private void FileWatcher_Created(object sender, FileSystemEventArgs e)
         {
             string FullPath = e.FullPath;
+            email.SubjectForCreationEvent();
             string body = String.Format("" +
                 "<h1>Witaj</h1><p>Utworzono nowy element w katologu <span style='color: red;'>{0}</span></p>" +
                 "<p style='font-weigth: 600;'>Więcej szczegółów w załączniku</p>", dirPath);

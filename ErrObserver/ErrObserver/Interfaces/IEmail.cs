@@ -6,7 +6,7 @@ namespace ErrObserver.Interfaces
 {
     interface IEmail
     {
-        void send(string dirPath, string filePath);
+        void send(string dirPath, string filePath, string body);
         void sendTest();
     }
 }

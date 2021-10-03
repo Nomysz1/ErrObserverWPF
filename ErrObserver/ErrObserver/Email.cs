@@ -24,6 +24,11 @@ namespace ErrObserver
             credential = new NetworkCredential(addr, password);
         }
 
+        public void SubjectForCreationEvent()
+        {
+            this.Subject = "Utworzono nowy plik w dniu " + DateTime.Now;
+        }
+
         public void addSMTPPort(ref int port)
         {
             this.SMTPPort = port;
