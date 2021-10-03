@@ -37,17 +37,29 @@ namespace ErrObserver
                 var pattern = returnPattern();
                 var dirWatcher = new FileSystemWatcher(this.dirPath, pattern);
                 dirWatcher.Created += FileWatcher_Created;
+                dirWatcher.Changed += FileWatcher_Changed;
                 dirWatcher.EnableRaisingEvents = true;
             }
             else
                 MessageBox.Show("Folder nie istnieje {0}", this.dirPath);
         }
 
+        private void FileWatcher_Changed(object sender, FileSystemEventArgs e)
+        {
+            string FullPath = e.FullPath;
+            string body = String.Format("" +
+                "<h1>Witaj</h1><p>Zmieniono element w katologu <span style='color: red;'>{0}</span></p>" +
+                "<p style='font-weigth: 600;'>Więcej szczegółów w załączniku</p>", dirPath);
+            email.send(this.dirPath, FullPath, body);
+        }
+
         private void FileWatcher_Created(object sender, FileSystemEventArgs e)
         {
             string FullPath = e.FullPath;
-            MessageBox.Show(FullPath);
-            email.send(this.dirPath, FullPath);
+            string body = String.Format("" +
+                "<h1>Witaj</h1><p>Utworzono nowy element w katologu <span style='color: red;'>{0}</span></p>" +
+                "<p style='font-weigth: 600;'>Więcej szczegółów w załączniku</p>", dirPath);
+            email.send(this.dirPath, FullPath, body);
         }
     }
 }

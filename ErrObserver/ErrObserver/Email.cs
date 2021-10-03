@@ -44,11 +44,9 @@ namespace ErrObserver
             this.EnableSsl = enableSSL;
         }
         //================================================
-        public void send(string dirPath, string filePath)
+        public void send(string dirPath, string filePath, string body)
         {
-            body = String.Format("" +
-                "<h1>Witaj</h1><p>Wykryto nowy element w katologu <span style='color: red;'>{0}</span></p>" +
-                "<p style='font-weigth: 600;'>Więcej szczegółów w załączniku</p>", dirPath);
+            this.body = body;
             var smtpClient = new SmtpClient()
             {
                 Port = this.SMTPPort,
